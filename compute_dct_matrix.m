@@ -1,6 +1,6 @@
 % This function returns an extended version of the 8x8 quantization matrix
 % used in JPEQ compression. The matrix is extended to a 16x16 matrix
-% according to empirical evidence provided in Fridrich et al,
+% according to empirical evidence provided in Fridrich et al - 
 %   J.Fridrich, D. Soukal, and J. Lukas. Detection of Copy-Move Forgery in 
 %   digital Images. Proc. Of Digital Forensic Research Workshop, Aug. 2003. 
 
