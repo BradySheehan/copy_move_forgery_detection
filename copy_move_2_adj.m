@@ -8,21 +8,27 @@
 % decrease seeing false positives
 
 % The algorithm can take in gray scale or color images. All images are
-% converted to gray scale before processing. Quality factor influences how
-% "good" a match is (higher value = less match, lower value = stronger
-% match) and the threshold is the number of patches that need to appear 
+% converted to gray scale before processing. 
+
+% Quality factor influences how "good" a match is 
+% (higher value = less match, lower value = stronger match). 
+
+% Threshold is the number of patches that need to appear 
 % to be copied together for it to be considered a forged region. 
 
-function image_copy = copy_move(color_image, quality_factor, threshold, notColor)
+function image_copy = copy_move_2_adj(color_image, quality_factor, threshold, not_color)
 tic
 %===================== Initializations ========================
 %%
 if nargin < 4
     image_copy = color_image;
     input_image = 255*im2double(rgb2gray(color_image)); %verified that the conversion to grayscale is same used in the paper
-elseif isequal(notcolor, true)
+elseif isequal(not_color, true)
     image_copy = color_image;
     input_image = color_image;
+else
+    image_copy = color_image;
+    input_image = 255*im2double(rgb2gray(color_image)); %verified that the conversion to grayscale is same used in the paper
 end
 
 block_size = 16; %want 16x16 blocks
