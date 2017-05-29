@@ -16,8 +16,7 @@
 % Threshold is the number of patches that need to appear 
 % to be copied together for it to be considered a forged region.
 
-% not_color indicates whether the input image is a color image (nxmx3) or
-% not (nxm)
+% not_color indicates whether the input image is a color image or not
 
 function image_copy = copy_move_2_adj(color_image, quality_factor, threshold, not_color)
 tic
